@@ -1,9 +1,9 @@
 import openai
 import streamlit as st
 from streamlit_chat import message
-# from api_key import openai_secret_key
-openai.api_key=st.secrets["api_secret"]
-
+from api_key import openai_secret_key
+# openai.api_key=st.secrets["api_secret"]
+openai.api_key=openai_secret_key
 #For this project, I used this article as my main reference https://medium.com/@avra42/build-your-own-chatbot-with-openai-gpt-3-and-streamlit-6f1330876846
 
 # generate the response function using openai.Completion
