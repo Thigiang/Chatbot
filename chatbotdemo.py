@@ -47,7 +47,7 @@ def updateinput():
 
 if st.session_state["generated"]:
     for i in range(len(st.session_state["generated"])-1,-1,-1):
-        message(st.session_state["past"][::-1][i], is_user=True, key=str(i)+'_user')
-        message(st.session_state["generated"][::-1][i],key=str(i))
+        message(st.session_state["past"][::-1][i], is_user=True,avatar_style="thumbs", key=str(i)+'_user')
+        message(st.session_state["generated"][::-1][i],avatar_style='bottts',key=str(i))
 
-user_input = st.text_input("Hello, I am a chatbot. Ask me a question: ","", key="input", on_change=updateinput)
+user_input = st.text_input("Hello, I am your assistant. Ask me your questions: ","", key="input", on_change=updateinput)
